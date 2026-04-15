@@ -1,57 +1,104 @@
+/* ===== BODY ===== */
 body {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 0;
+	min-height: 100vh;
+
+	font-family: 'Trebuchet MS', Arial, sans-serif;
 	background-color: darkslategray;
 	color: wheat;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+/* ===== MAIN MENU ===== */
 #main-menu {
-	padding-top: 200px;
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 	text-align: center;
-	text-decoration: none;
+	text-align: center;
+	margin: 200px;
 }
 
+/* Title */
 #main-menu h2 {
-	font-size: 30px;
+	font-size: clamp(24px, 5vw, 40px);
+	/* responsive text */
+	margin-bottom: 20px;
 }
 
+/* ===== MENU ===== */
+#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 300px;
+}
+
+/* Buttons */
 #menu a {
 	display: block;
-	width: 200px;
-	padding: 10px;
-	margin: 10px auto;
+	/* width: 100%; */
+	width: 80%;
+	max-width: 250px;
+
+	padding: 12px;
+	margin: 10px 0;
+
 	background-color: navajowhite;
 	color: black;
 	text-decoration: none;
-	border-radius: 5px;
+
+	border-radius: 8px;
+	text-align: center;
+
+	transition: 0.2s;
 }
 
+/* Hover */
+#menu a:hover {
+	transform: scale(1.05);
+}
 
+/* ===== BACK BUTTON ===== */
 .back {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 15px;
+	left: 15px;
 }
 
-/* Back button */
 .back a {
 	text-decoration: none;
-	padding: 10px 15px;
+	padding: 8px 12px;
 
 	background: navajowhite;
 	color: black;
-	border-radius: 8px;
+	border-radius: 6px;
 
 	font-size: 14px;
-
-	transition: all 0.2s ease;
 }
 
+/* ===== HEADERS ===== */
+#game-header h2,
 #credit-header h2 {
 	text-align: center;
+	padding: 8px 12px;
+	font-size: clamp(22px, 4vw, 35px);
+}
+
+/* ===== CREDIT TEXT ===== */
+#credit {
+	text-align: center;
+	padding: 20px;
 }
 
 #credit p {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 25px;
-	text-align: center;
+	font-size: clamp(16px, 3vw, 24px);
 }
